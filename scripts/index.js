@@ -5,8 +5,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const footerWrapper = document.querySelector('.footer__wrapper');
     const mainContentLeft = document.querySelector('.main__content-left');
     const mainContentLeftLeaf = document.querySelector('.main__content-left-leaf');
-
+    const navigationButton = document.getElementById('navigation');
     const otherFeatureButton = document.getElementById('other-feature');
+
+    // Click on navigation to move to body-section with scroll animation
+    navigationButton.addEventListener('click', () => {
+        console.log('click');
+        const mainContent = document.getElementById('body-section');
+        if (mainContent) {
+            mainContent.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
 
     otherFeatureButton.addEventListener('click', () => {
         otherFeatureButton.classList.add('active');
