@@ -5,16 +5,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const footerWrapper = document.querySelector('.footer__wrapper');
     const mainContentLeft = document.querySelector('.main__content-left');
     const mainContentLeftLeaf = document.querySelector('.main__content-left-leaf');
-    const navigationButton = document.getElementById('navigation');
+    const navigationButton = document.getElementById('navigation-button');
     const otherFeatureButton = document.getElementById('other-feature');
+    const mainContent = document.getElementById('body-section');
 
-    // Click on navigation to move to body-section with scroll animation
+
+    function remToPx(rem) {
+        return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
+    }
+
     navigationButton.addEventListener('click', () => {
-        console.log('click');
-        const mainContent = document.getElementById('body-section');
-        if (mainContent) {
-            mainContent.scrollIntoView({ behavior: 'smooth' });
-        }
+        // Scroll to main content with a small offset in rem
+        const offsetRem = 0; // 5rem offset
+        const offsetPx = remToPx(offsetRem);
+        
+        const mainContentTop = mainContent.getBoundingClientRect().top + window.scrollY;
+        
+        window.scrollTo({
+            top: mainContentTop - offsetPx,
+            behavior: 'smooth'
+        });
     });
 
     otherFeatureButton.addEventListener('click', () => {
