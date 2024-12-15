@@ -316,6 +316,28 @@
     opacity: 0;
   }
 }
+@keyframes scale-animation {
+  0% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+@keyframes box-animation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 .header__left-sidebar {
   position: absolute;
   top: 2rem;
@@ -406,17 +428,6 @@
   right: 4rem;
   animation: scale-animation 1.2s cubic-bezier(0.58, 0.48, 0.45, 1.08) infinite;
 }
-@keyframes scale-animation {
-  0% {
-    transform: scale(0.9);
-  }
-  50% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0.9);
-  }
-}
 .header__content-right-box-decor {
   width: 6.5rem;
   aspect-ratio: 104/108;
@@ -424,17 +435,6 @@
   bottom: -10%;
   right: -15%;
   animation: box-animation 1.5s ease-in-out infinite;
-}
-@keyframes box-animation {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-  100% {
-    transform: translateY(0);
-  }
 }
 
 .heading__image {
