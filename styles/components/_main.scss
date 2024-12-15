@@ -48,8 +48,8 @@
           width: 20.4375rem;
           transform: translate(12rem, 0rem);
           position: absolute;
-          bottom: 17.5rem;
-          left: 5.5rem;
+          bottom: 8.5rem;
+          left: 11.5rem;
           transition: transform 0.6s cubic-bezier(.62, .22, .24, .92);
           transition-delay: 1s;
           opacity: 0;
@@ -62,15 +62,15 @@
           transition: transform 0.6s cubic-bezier(.62, .22, .24, .92);
           transition-delay: 1s;
           will-change: transform;
-          bottom: 19.5rem;
-          right: 7rem;
+          bottom: 11.5rem;
+          right: -1rem;
           opacity: 0;
         }
       }
 
       &-cloud {
-        margin-top: -5rem;
-        width: 57.75rem;
+        margin-top: 1rem;
+        height: 39.1875rem;
         display: block;
         object-fit: contain;
         object-position: center;
@@ -78,19 +78,18 @@
       }
 
       &-bim {
-        width: 23.125rem;
-        aspect-ratio: 370 / 395;
+        height: 19.625rem;
         position: absolute;
-        top: 9rem;
-        left: 18.5rem;
+        top: 12.5rem;
+        right: -1rem;
         z-index: 5;
       }
-
+      
       &-toys {
         width: 13.1875rem;
         position: absolute;
-        left: 32.5rem;
-        bottom: 13rem;
+        right: 1.5rem;
+        bottom: 4rem;
         z-index: 10;
       }
 
@@ -143,6 +142,7 @@
         top: 0;
         left: 0;
       }
+
       & button {
         width: fit-content;
         display: flex;
@@ -217,7 +217,7 @@
   }
 
   &__brand {
-    margin-top: -1rem;
+    margin-top: 8rem;
     display: flex;
     justify-content: center;
     align-items: center;

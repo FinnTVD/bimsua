@@ -29,6 +29,22 @@
   }
 }
 
+@keyframes scale-with-opacity-animation {
+  0% {
+    transform: scale(0.9) translate(0, 0.5rem);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1) translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.9) translate(0, 0.5rem);
+    opacity: 0.9;
+  }
+}
+
+
 @keyframes box-animation {
   0% {
     transform: translateY(0);
@@ -41,7 +57,6 @@
   }
 }
 
-
 .header {
   &__left-sidebar {
     position: absolute;
@@ -50,11 +65,36 @@
     cursor: pointer;
 
     &-humberger {
-      width: 3.4375rem; // 55px
-      height: 0.6rem; // 10px
-      background-color: white;
-      margin-bottom: 0.5rem;
-      border-radius: 0.3rem; // 2px
+      width: 3.4375rem;
+      z-index: 10;
+      position: relative;
+    }
+
+    &-close-wrapper {
+      display: none;
+      z-index: 100;
+      position: relative;
+      align-items: start;
+      gap: 0.5rem;
+
+      button {
+        display: flex;
+        width: fit-content;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        margin-right: 1rem;
+      }
+    }
+
+    &.active {
+      .header__left-sidebar-close-wrapper {
+        display: flex;
+      }
+
+      .header__left-sidebar-humberger {
+        display: none;
+      }
     }
   }
 
@@ -82,21 +122,23 @@
       margin-left: 12.9375rem; // 207px
 
       &-frame-decor {
+        cursor: pointer !important;
         width: 8.25rem; // 132px
         aspect-ratio: 132 / 167;
         position: absolute;
         top: -2.7rem; // -30px
         left: -2.2rem; // -24px
         z-index: 10;
-        transform: scale(0);
         opacity: 0;
-        transition: transform 1s cubic-bezier(0.62, 0.22, 0.24, 0.92),
-          opacity 1s cubic-bezier(0.62, 0.22, 0.24, 0.92);
+        transition-delay: 2s;
+        transform: scale(0);
+        transition: opacity 0.5s cubic-bezier(0.62, 0.22, 0.24, 0.92),
+          transform 0.5s cubic-bezier(0.62, 0.22, 0.24, 0.92);
 
-        // Delayed scale to 1 after 2 seconds
-
-        animation: initial-scale-animation 10s
-          cubic-bezier(0.62, 0.22, 0.24, 0.92) infinite 5s;
+        &.active {
+          transform: scale(1);
+          opacity: 1;
+        }
       }
 
       &-frame {
@@ -121,7 +163,7 @@
         position: absolute;
         bottom: 0.95rem; // 15px
         right: 0.7rem; // 12px
-        width: 38.5rem; // 616px
+        width: 38.6rem; // 616px
         aspect-ratio: 616 / 354;
         object-fit: cover;
         z-index: 0;
@@ -156,6 +198,22 @@
         bottom: -10%;
         right: -15%;
         animation: box-animation 1.5s ease-in-out infinite;
+      }
+
+      &-box-bobby {
+        width: 4.375rem;
+        position: absolute;
+        bottom: -1.5rem;
+        left: 4rem;
+        opacity: 0;
+        transform: scale(0.7) translate(8rem, -4rem);
+        transition: opacity 0.5s cubic-bezier(0.62, 0.22, 0.24, 0.92),
+          transform 0.5s cubic-bezier(0.62, 0.22, 0.24, 0.92);
+
+        &.active {
+          transform: scale(1) translate(0, 0);
+          opacity: 1;
+        }
       }
     }
   }
@@ -197,5 +255,47 @@
   &__text-button {
     width: 3rem; // 40px
     aspect-ratio: 1 / 1;
+    animation: scale-with-opacity-animation 2s cubic-bezier(0.58, 0.48, 0.45, 1.08) infinite;
+  }
+}
+
+.header__left-sidebar-close {
+  width: 3rem;
+}
+
+.nav {
+  #nav-close-button {
+    aspect-ratio: 1 / 1;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.5rem;
+    opacity: 0.7;
+    border-radius: 1rem;
+    background-color: #fff;
+    border: 0.125rem solid #f32281;
+  }
+
+  &__item {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #f32281;
+    text-align: start;
+    font-style: normal;
+    line-height: 130%; /* 31.2px */
+    letter-spacing: -0.48px;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+
+
+    &:hover {
+      text-decoration-line: underline;
+    }
   }
 }

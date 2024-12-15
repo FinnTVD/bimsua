@@ -15,10 +15,24 @@
         <!-- Start header -->
         <img src="/assets/section-header/heading_text.png" class="heading__image" alt="" draggable="false">
         <img src="/assets/section-header/heading_text-2.png" class="heading__image-2" alt="" draggable="false">
-        <div class="header__left-sidebar">
-            <div class="header__left-sidebar-humberger"></div>
-            <div class="header__left-sidebar-humberger"></div>
-            <div class="header__left-sidebar-humberger"></div>
+        <div class="header__left-sidebar" id="nav-sidebar" data-prevent-close-nav-sidebar>
+            <div class="header__left-sidebar-close-wrapper">
+                <button id="nav-close-button"><img src="/assets/section-header/close.svg"
+                        class="header__left-sidebar-close" alt="" draggable="false"></button>
+                <div class="nav__list">
+                    <p class="nav__item">
+                        Bí kíp mặc tã cho bé sơ sinh
+                    </p>
+                    <p class="nav__item">
+                        Thiết kế diệu kỳ
+                    </p>
+                    <p class="nav__item">
+                        Mẹ ơi mua ngay
+                    </p>
+                </div>
+            </div>
+            <img id="nav-open-button" src="/assets/section-header/humberger.svg" class="header__left-sidebar-humberger"
+                alt="" draggable="false">
         </div>
         <div class="header__right-sidebar">
             <img src="/assets/section-header/logo.png" class="header__right-sidebar-logo" alt="" draggable="false">
@@ -27,14 +41,14 @@
         <!-- Start header content -->
         <div class="header__content">
             <div class="header__content-left">
-                <img src="/assets/section-header/video-frame-decor.png" class="header__content-left-frame-decor" alt=""
-                    draggable="false">
-                <video src="/assets/section-header/video.mp4" class="header__content-left-video" autoplay loop
-                    muted></video>
+                <img src="/assets/section-header/video-frame-decor.png" id="bobby-1"
+                    class="header__content-left-frame-decor active" alt="" draggable="false">
+                <video id="video-player" src="/assets/section-header/video.mp4" class="header__content-left-video"
+                    loop></video>
                 <img src="/assets/section-header/video-frame.png" class="header__content-left-frame" alt=""
                     draggable="false">
                 <img src="/assets/section-header/video-play.png" class="header__content-left-play-icon" alt=""
-                    draggable="false">
+                    draggable="false" id="video-play-icon">
             </div>
             <div class="header__content-right">
                 <div class="header__content-right-box">
@@ -44,6 +58,9 @@
                         alt="" draggable="false">
                     <img src="/assets/section-header/box-decor.png" class="header__content-right-box-decor" alt=""
                         draggable="false">
+
+                    <img src="/assets/section-header/bobby.png" class="header__content-right-box-bobby" id="bobby-2"
+                        alt="" draggable="false">
                 </div>
             </div>
         </div>
@@ -65,7 +82,8 @@
             <div class="main__content">
                 <div class="main__content-left">
                     <img src="/assets/section-main/cloud.png" class="main__content-left-cloud" alt="" draggable="false">
-                    <img src="/assets/section-main/bim.png" class="main__content-left-bim" alt="" draggable="false">
+                    <img src="/assets/section-main/bim-2.png" id="bim-image" class="main__content-left-bim" alt=""
+                        draggable="false">
                     <img src="/assets/section-main/toys.png " class="main__content-left-toys" alt="" draggable="false">
 
                     <div class="main__content-left-leaf">
@@ -85,10 +103,8 @@
 
                     <div class="main__content-button " id="other-feature">
                         <div class="other-features-wrapper">
-                            <img src="/assets/section-main/badge-3.png" class="badge-3" alt=""
-                                draggable="false">
-                            <img src="/assets/section-main/badge-4.png" class="badge-4" alt=""
-                                draggable="false">
+                            <img src="/assets/section-main/badge-3.png" class="badge-3" alt="" draggable="false">
+                            <img src="/assets/section-main/badge-4.png" class="badge-4" alt="" draggable="false">
                         </div>
                         <button>
                             Tính năng khác
