@@ -37,23 +37,34 @@
 
     &-left {
       position: relative;
+      transform: translateY(10rem);
+      opacity: 0;
+      transition: all 0.6s cubic-bezier(.62, .22, .24, .92);
+      will-change: transform, opacity;
 
       &-leaf {
         z-index: 2;
         &-left {
           width: 20.4375rem;
-          transform: translate(2rem, 0rem);
+          transform: translate(11rem, 0rem);
           position: absolute;
           bottom: 17.5rem;
-          left: 8.5rem;
+          left: 5.5rem;
+          transition: transform 0.6s cubic-bezier(.62, .22, .24, .92);
+          transition-delay: 1s;
+          opacity: 0;
         }
 
         &-right {
-          width: 33.6875rem;
-          transform: translate(-2rem, 0rem);
+          width: 14.6875rem;
+          transform: translate(-11rem, 0rem);
           position: absolute;
-          bottom: 12.5rem;
-          right: 4rem;
+          transition: transform 0.6s cubic-bezier(.62, .22, .24, .92);
+          transition-delay: 1s;
+          will-change: transform;
+          bottom: 19.5rem;
+          right: 7rem;
+          opacity: 0;
         }
       }
 
@@ -81,6 +92,21 @@
         left: 32.5rem;
         bottom: 13rem;
         z-index: 10;
+      }
+
+      &.active {
+        transform: translateY(0);
+        opacity: 1;
+
+        & .main__content-left-leaf-left  {
+          transform: translate(4rem, 0rem);
+          opacity: 1;
+        }
+
+        & .main__content-left-leaf-right  {
+          transform: translate(-2rem, 0rem);
+          opacity: 1;
+        }
       }
     }
 
@@ -110,24 +136,55 @@
     }
 
     &-button {
-      width: fit-content;
-      display: flex;
-      align-items: center;
-      border: 1px solid #000;
-      gap: 1rem;
-      border-radius: 0.875rem;
-      padding: 1rem;
-      cursor: pointer;
-      color: #be1d8d;
-      font-size: 2rem;
-      font-weight: 700;
-      line-height: 2.625rem;
-      border: 0.1875rem solid #be1d8d;
-      margin-left: 5rem;
 
-      & img {
+      .other-features-wrapper {
+        display: none;
+      }
+      & button {
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        border: 1px solid #000;
+        gap: 1rem;
+        border-radius: 0.875rem;
+        padding: 1rem;
+        cursor: pointer;
+        color: #be1d8d;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 2.625rem;
+        border: 0.1875rem solid #be1d8d;
+        margin-left: 5rem;
+      }
+
+      &-decor {
         width: 1.625rem;
         aspect-ratio: 16 / 16;
+      }
+
+      &.active {
+        .other-features-wrapper {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          margin-left: 4rem;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 1rem;
+
+          & .badge-3 {
+            width: 21rem;
+          }
+
+          & .badge-4 {
+            width: 25rem;
+          }
+        }
+
+        & button {
+          background-color: #be1d8d;
+          color: #fff;
+        }
       }
     }
   }

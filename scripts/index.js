@@ -1,21 +1,21 @@
-const CONTACT = {
-    company: 'CÔNG TY CỔ PHẦN DIANA UNICHARM',
-    address: 'Khu Công nghiệp Vĩnh tuy, đường Lĩnh Nam, Phường Vĩnh Hưng, Quận Hoàng Mai, Hà Nội',
-    phone: '1900 585896',
-    email: 'cskh@unicharm.com',
-    CNDT: '9853086262 do Sở Kế hoạch và Đầu tư TP. Hà Nội cấp ngày 22.9.2011',
-    MST: '0100507058',
-}
-
 document.addEventListener('DOMContentLoaded', () => {
     const footerDecorLeft = document.querySelector('.footer__decor-left');
     const footerDecorRight = document.querySelector('.footer__decor-right');
     const footerDecorBear = document.querySelector('.footer__decor-bear');
     const footerWrapper = document.querySelector('.footer__wrapper');
+    const mainContentLeft = document.querySelector('.main__content-left');
+    const mainContentLeftLeaf = document.querySelector('.main__content-left-leaf');
+
+    const otherFeatureButton = document.getElementById('other-feature');
+
+    otherFeatureButton.addEventListener('click', () => {
+        otherFeatureButton.classList.toggle('active');
+    });
+
     const observerOptions = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.7 // Trigger when 10% of the footer is visible
+        threshold: 0.5 // Trigger when 10% of the footer is visible
     };
 
     const footerObserver = new IntersectionObserver((entries) => {
@@ -36,9 +36,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
+    const bodySectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                mainContentLeft.classList.add('active');
+                mainContentLeftLeaf.classList.add('active');
+            } else {
+                mainContentLeft.classList.remove('active');
+                mainContentLeftLeaf.classList.remove('active');
+            }
+        });
+    }, observerOptions);
+
     // Start observing the footer
     const footer = document.querySelector('.footer');
     if (footer) {
         footerObserver.observe(footer);
+    }
+
+    const bodySection = document.getElementById('body-section');
+    if (bodySection) {
+        bodySectionObserver.observe(bodySection);
     }
 });
