@@ -301,20 +301,19 @@
 @keyframes initial-scale-animation {
   0% {
     transform: scale(0);
+    opacity: 0;
+  }
+  10% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  90% {
+    transform: scale(1);
+    opacity: 1;
   }
   100% {
-    transform: scale(1);
-  }
-}
-@keyframes frame-decor-scale-animation {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
+    transform: scale(0);
+    opacity: 0;
   }
 }
 .header__left-sidebar {
@@ -360,8 +359,9 @@
   left: -2.2rem;
   z-index: 10;
   transform: scale(0);
-  transition: transform 1s cubic-bezier(0.62, 0.22, 0.24, 0.92);
-  animation: initial-scale-animation 1s cubic-bezier(0.62, 0.22, 0.24, 0.92) forwards 3s, frame-decor-scale-animation 2s ease-in-out infinite 2.6s;
+  opacity: 0;
+  transition: transform 1s cubic-bezier(0.62, 0.22, 0.24, 0.92), opacity 1s cubic-bezier(0.62, 0.22, 0.24, 0.92);
+  animation: initial-scale-animation 10s cubic-bezier(0.62, 0.22, 0.24, 0.92) infinite 5s;
 }
 .header__content-left-frame {
   width: 40.125rem;
