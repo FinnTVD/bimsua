@@ -120,8 +120,13 @@
   object-fit: contain;
   object-position: bottom;
 }
+.main__content-button {
+  position: relative;
+}
 .main__content-button .other-features-wrapper {
-  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .main__content-button button {
   width: fit-content;
@@ -138,10 +143,28 @@
   line-height: 2.625rem;
   border: 0.1875rem solid #be1d8d;
   margin-left: 5rem;
+  transition: all 0.6s cubic-bezier(0.62, 0.22, 0.24, 0.92);
+  will-change: transform, opacity;
 }
 .main__content-button-decor {
   width: 1.625rem;
   aspect-ratio: 16/16;
+}
+.main__content-button .badge-3 {
+  width: 21rem;
+  transform: translateY(-10rem);
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.62, 0.22, 0.24, 0.92);
+  will-change: transform, opacity;
+  z-index: 10;
+}
+.main__content-button .badge-4 {
+  width: 25rem;
+  transform: translateY(-20rem);
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.62, 0.22, 0.24, 0.92);
+  will-change: transform, opacity;
+  z-index: 10;
 }
 .main__content-button.active .other-features-wrapper {
   display: flex;
@@ -153,14 +176,18 @@
   margin-bottom: 1rem;
 }
 .main__content-button.active .other-features-wrapper .badge-3 {
-  width: 21rem;
+  transform: translateY(0);
+  opacity: 1;
 }
 .main__content-button.active .other-features-wrapper .badge-4 {
-  width: 25rem;
+  transform: translateY(0);
+  opacity: 1;
 }
 .main__content-button.active button {
   background-color: #be1d8d;
   color: #fff;
+  transform: translateY(20rem);
+  opacity: 0;
 }
 .main__brand {
   margin-top: -1rem;

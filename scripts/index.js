@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const otherFeatureButton = document.getElementById('other-feature');
 
     otherFeatureButton.addEventListener('click', () => {
-        otherFeatureButton.classList.toggle('active');
+        otherFeatureButton.classList.add('active');
     });
 
     const observerOptions = {

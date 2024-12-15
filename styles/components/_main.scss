@@ -136,9 +136,12 @@
     }
 
     &-button {
+      position: relative;
 
       .other-features-wrapper {
-        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
       }
       & button {
         width: fit-content;
@@ -155,11 +158,31 @@
         line-height: 2.625rem;
         border: 0.1875rem solid #be1d8d;
         margin-left: 5rem;
+        transition: all 0.6s cubic-bezier(.62, .22, .24, .92);
+        will-change: transform, opacity;
       }
 
       &-decor {
         width: 1.625rem;
         aspect-ratio: 16 / 16;
+      }
+
+      & .badge-3 {
+        width: 21rem;
+        transform: translateY(-10rem);
+        opacity: 0;
+        transition: all 0.6s cubic-bezier(.62, .22, .24, .92);
+        will-change: transform, opacity;
+        z-index: 10;
+      }
+
+      & .badge-4 {
+        width: 25rem;
+        transform: translateY(-20rem);
+        opacity: 0;
+        transition: all 0.6s cubic-bezier(.62, .22, .24, .92);
+        will-change: transform, opacity;
+        z-index: 10;
       }
 
       &.active {
@@ -173,17 +196,21 @@
           margin-bottom: 1rem;
 
           & .badge-3 {
-            width: 21rem;
+            transform: translateY(0);
+            opacity: 1;
           }
 
           & .badge-4 {
-            width: 25rem;
+            transform: translateY(0);
+            opacity: 1;
           }
         }
 
         & button {
           background-color: #be1d8d;
           color: #fff;
+          transform: translateY(20rem);
+          opacity: 0;
         }
       }
     }
