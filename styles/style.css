@@ -44,7 +44,7 @@
 }
 .main__content-left-leaf-left {
   width: 20.4375rem;
-  transform: translate(11rem, 0rem);
+  transform: translate(12rem, 0rem);
   position: absolute;
   bottom: 17.5rem;
   left: 5.5rem;
@@ -334,7 +334,7 @@
     transform: scale(1);
     opacity: 1;
   }
-  90% {
+  80% {
     transform: scale(1);
     opacity: 1;
   }
