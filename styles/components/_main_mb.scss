@@ -1,0 +1,85 @@
+@media screen and (max-width: 767px) {
+  .main {
+    &__title-image {
+      width: 17rem;
+      margin-top: 1rem;
+    }
+    &-decor-1 {
+      display: none;
+    }
+    &__content {
+      flex-direction: column;
+      &-left {
+        width: 100%;
+        &-leaf {
+          display: none;
+        }
+
+        &-cloud {
+          display: none;
+        }
+
+        &-bim {
+          display: none;
+        }
+
+        &-toys {
+          display: none;
+        }
+
+        &-bim-mb {
+          display: block;
+          width: 100%;
+          height: 22.625rem;
+          margin-top: -2rem;
+        }
+      }
+
+      &-badge {
+        margin-top: 1rem;
+        width: 100%;
+
+        &-image-1 {
+          width: 21rem;
+        }
+
+        &-image-2 {
+          width: 25.625rem;
+          transform: translateX(-1.2rem);
+        }
+      }
+      &-button {
+        & button {
+          margin-top: -0.8rem;
+          color: #be1d8d;
+          font-size: 1.1875rem;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 130%; /* 1.54375rem */
+          text-transform: uppercase;
+          width: 16.3rem;
+          margin-left: 4rem;
+        }
+        & .badge-3 {
+          margin-left: -1rem;
+          width: 17rem;
+        }
+        & .badge-4 {
+          width: 18rem;
+        }
+        &.active {
+          .other-features-wrapper {
+            margin-left: 3.4rem;
+            margin-top: -1.8rem;
+          }
+        }
+      }
+    }
+    &__brand {
+      margin-top: 12rem;
+      &-image {
+        width: 70%;
+      }
+    }
+  }
+}

@@ -1,0 +1,203 @@
+@media screen and (max-width: 767px) {
+  .header {
+    &__left-sidebar {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      &-humberger {
+        width: 1.28rem;
+      }
+      &-close-wrapper {
+        button {
+          margin-right: 0;
+        }
+      }
+    }
+
+    &__right-sidebar {
+      position: absolute;
+      top: 2rem;
+      right: 50%;
+      transform: translate(50%, 0);
+      &-logo {
+        width: 10.12056rem;
+        height: 6.9375rem;
+      }
+    }
+
+    &__content {
+      margin-top: 0;
+      flex-direction: column;
+      &-left {
+        margin-left: 0;
+
+        &-nv-mb {
+          display: block;
+          width: 4rem;
+          height: 5.625rem;
+          position: absolute;
+          top: 19.8rem;
+          right: 2rem;
+          z-index: 1;
+        }
+
+        &-frame {
+          display: none;
+        }
+        &-frame-mb {
+          width: 100vw;
+          height: 16.3125rem;
+          display: block;
+          margin-top: 19.5rem;
+          position: relative;
+          z-index: 2;
+        }
+        &-frame-decor {
+          display: none;
+        }
+        &-play-icon {
+          bottom: 14%;
+          width: 3.25rem;
+        }
+        video {
+          height: 11.75rem;
+          width: calc(100vw - 2.6rem);
+          right: 50%;
+          bottom: 0.4rem;
+          transform: translate(50%, 0);
+          border-radius: 0.75663rem;
+          z-index: 10;
+        }
+      }
+      &-right {
+        margin-top: 0.44rem;
+        margin-right: 0;
+        &-box-image {
+          display: none;
+        }
+        &-box-image-mb {
+          display: block;
+          width: 16.29306rem;
+          height: 10.25rem;
+        }
+        &-box-message {
+          bottom: -0.5rem;
+          left: 50%;
+          transform: translate(-50%, 100%);
+          right: auto;
+          width: 13rem;
+        }
+        &-box-bobby {
+          width: 3.375rem;
+          position: absolute;
+          bottom: -4rem;
+          left: -2rem;
+        }
+        &-box-decor {
+          display: none;
+        }
+        &-tym {
+          position: absolute;
+          top: 4.81rem;
+          left: -0.6rem;
+          width: 1.5rem;
+          height: 1.25rem;
+          animation: main-decor-1-animation 2s ease-in-out infinite;
+        }
+        &-pink {
+          position: absolute;
+          top: 7rem;
+          left: -2.26rem;
+          width: 1.6875rem;
+          height: 2.5rem;
+          animation: main-decor-1-animation 2s ease-in-out infinite;
+        }
+        &-jade {
+          position: absolute;
+          top: 5.19rem;
+          width: 2.375rem;
+          height: 2.4375rem;
+          right: -0.53rem;
+          animation: main-decor-1-animation 2s ease-in-out infinite;
+        }
+      }
+    }
+
+    @keyframes scale-animation {
+      0% {
+        transform: translate(-50%, 100%) scale(0.9);
+      }
+      50% {
+        transform: translate(-50%, 100%) scale(1);
+      }
+      100% {
+        transform: translate(-50%, 100%) scale(0.9);
+      }
+    }
+  }
+  .header__left-sidebar-close {
+    width: 2rem;
+  }
+  .nav {
+    &__list {
+      opacity: 1;
+      padding: 1rem;
+    }
+    &__item {
+      font-size: 1.25rem;
+      text-decoration-line: underline;
+    }
+  }
+
+  .heading {
+    &__image {
+      display: none;
+    }
+    &__image__mb {
+      display: block;
+      width: 22.875rem;
+      height: 4rem;
+      position: absolute;
+      top: 11rem;
+      right: 0;
+    }
+
+    &__image-2 {
+      width: 20.9375rem;
+      height: 4.0625rem;
+      top: 16rem;
+      position: absolute;
+      right: 1rem;
+    }
+  }
+
+  .navigation {
+    position: relative;
+    margin-top: 6.4rem;
+    &__text-image {
+      display: none;
+    }
+    &__text-button {
+      width: 1.5rem;
+    }
+    &__text-title {
+      display: block;
+      width: 100%;
+      padding: 0 1rem;
+      position: absolute;
+      top: -1.5rem;
+      left: 50%;
+      transform: translate(-50%, 0);
+      color: #f32181;
+      text-align: center;
+      text-shadow: 0px 0px 12px rgba(255, 255, 255, 0.8);
+      -webkit-text-stroke: 1px #ffffff;
+      font-family: "Coiny", system-ui;
+      font-size: 0.75rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%; /* 0.975rem */
+      text-transform: uppercase;
+    }
+  }
+}

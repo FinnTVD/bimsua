@@ -1,6 +1,9 @@
 @use "./components/main.scss";
 @use "./components/footer.scss";
 @use "./components/header.scss";
+@use "./components/header_mb.scss";
+@use "./components/main_mb.scss";
+@use "./components/footer_mb.scss";
 
 @font-face {
   font-family: "linotte";
@@ -62,4 +65,14 @@ body {
   height: 100%;
   position: relative;
   overflow: hidden;
+}
+
+@media screen and (max-width: 767px) {
+  html {
+    font-size: 4.26667vw;
+  }
+
+  .container {
+    background-image: url("/assets/background_mb.webp");
+  }
 }
