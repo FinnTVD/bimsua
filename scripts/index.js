@@ -159,8 +159,8 @@ document.addEventListener("DOMContentLoaded", () => {
         mainContentLeftLeaf.classList.add("active");
 
         // Add interval to bim image to change url image bim-1 and bim-2 alternate after 5 seconds
-        const bimImageSrc1 = "/assets/section-main/bim-1.png";
-        const bimImageSrc2 = "/assets/section-main/bim-2.png";
+        const bimImageSrc1 = "./assets/section-main/bim-1.png";
+        const bimImageSrc2 = "./assets/section-main/bim-2.png";
         let isSrc1 = false;
 
         // Clear interval if it exists
@@ -187,8 +187,8 @@ document.addEventListener("DOMContentLoaded", () => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           // Add interval to bim image to change url image bim-1 and bim-2 alternate after 5 seconds
-          const bimImageSrc1 = "/assets/section-main/image-bim.webp";
-          const bimImageSrc2 = "/assets/section-main/image-bim-open.webp";
+          const bimImageSrc1 = "./assets/section-main/image-bim.webp";
+          const bimImageSrc2 = "./assets/section-main/image-bim-open.webp";
           let isSrc1 = false;
 
           // Clear interval if it exists
