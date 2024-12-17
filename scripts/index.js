@@ -163,29 +163,19 @@ document.addEventListener("DOMContentLoaded", () => {
       if (entry.isIntersecting) {
         mainContentLeft.classList.add("active");
         mainContentLeftLeaf.classList.add("active");
-
-        // Add interval to bim image to change url image bim-1 and bim-2 alternate after 5 seconds
-        const bimImageSrc1 = "./assets/section-main/bim-1.png";
-        const bimImageSrc2 = "./assets/section-main/bim-2.png";
-        let isSrc1 = false;
-
-        // Clear interval if it exists
+    
+        // Xóa interval trước nếu nó tồn tại
         if (intervalId) {
           clearInterval(intervalId);
         }
-
-        // Set interval to change the bim image source
-        intervalId = setInterval(() => {
-          bimImage.src = isSrc1 ? bimImageSrc1 : bimImageSrc2;
-          isSrc1 = !isSrc1;
-        }, 5000);
       }
-
-      // Clear interval when the element is not intersecting
+    
+      // Clear interval khi phần tử không còn trong viewport
       if (!entry.isIntersecting) {
         clearInterval(intervalId);
       }
     });
+    
   }, observerOptions);
   if (window.innerWidth < 768) {
     let intervalId;
@@ -260,3 +250,14 @@ document.addEventListener("DOMContentLoaded", () => {
     scrollToElementById("footer");
   });
 });
+const main__content_left_bim = document.querySelectorAll(".main__content-left-bim");
+
+setInterval(() => {
+    main__content_left_bim.forEach(element => {
+        if (element.classList.contains('active')) {
+            element.classList.remove('active');
+        } else {
+            element.classList.add('active');
+        }
+    });
+}, 3000);

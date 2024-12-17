@@ -80,6 +80,12 @@
   top: 12.5rem;
   right: -1rem;
   z-index: 5;
+  opacity: 0;
+  transition: 1s ease-in-out;
+}
+.main__content-left-bim.active {
+  opacity: 1;
+  transition: 1s ease-in-out;
 }
 .main__content-left-bim-mb {
   display: none;
@@ -92,7 +98,7 @@
   z-index: 10;
 }
 .main__content-left.active {
-  transform: translateY(0);
+  transform: translateY(-6rem);
   opacity: 1;
 }
 .main__content-left.active .main__content-left-leaf-left {
