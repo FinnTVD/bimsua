@@ -56,6 +56,18 @@
   }
 }
 
+@keyframes size-animation {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(-1rem) rotate(5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
+
 .header {
   &__left-sidebar {
     position: absolute;
@@ -183,8 +195,9 @@
       margin-right: 9rem;
 
       &-box-image {
-        width: 33.375rem; // 475px
-        aspect-ratio: 534 / 409;
+        width: 29rem;
+        height: 24.5rem;
+        margin-top: -5rem;
       }
       &-box-image-mb {
         display: none;
@@ -194,14 +207,14 @@
         width: 19.8125rem; // 508px
         aspect-ratio: 317 / 111;
         position: absolute;
-        bottom: -15%;
-        right: 4rem;
+        bottom: -29%;
+        right: 1rem;
         animation: scale-animation 1.2s cubic-bezier(0.58, 0.48, 0.45, 1.08)
           infinite;
       }
 
       &-box-decor {
-        width: 6.5rem; // 104px
+        width: 5.5rem; // 104px
         aspect-ratio: 104 / 108;
         position: absolute;
         bottom: -10%;
@@ -212,8 +225,8 @@
       &-box-bobby {
         width: 4.375rem;
         position: absolute;
-        bottom: -1.5rem;
-        left: 4rem;
+        bottom: -2.5rem;
+        left: 2rem;
         opacity: 0;
         transform: scale(0.7) translate(8rem, -4rem);
         transition: opacity 0.5s cubic-bezier(0.62, 0.22, 0.24, 0.92),
@@ -223,6 +236,16 @@
           transform: scale(1) translate(0, 0);
           opacity: 1;
         }
+      }
+      &-size {
+        width: 6.78213rem;
+        height: 5.22513rem;
+        position: absolute;
+        top: 0;
+        right: -2rem;
+        z-index: 10;
+        animation: size-animation 2s ease-in-out infinite;
+        display: block;
       }
 
       &-tym {
@@ -240,10 +263,9 @@
 
 .heading {
   &__image {
-    padding-top: 1rem;
     width: 36.375rem; // 582px
     aspect-ratio: 582 / 110;
-    margin: 0 auto 0 auto;
+    margin: 1rem auto 0;
     display: block;
   }
   &__image__mb {
