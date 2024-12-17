@@ -12,10 +12,10 @@
   display: none;
 }
 .main-decor-1 {
-  width: 6.5rem;
+  width: 5.5rem;
   aspect-ratio: 104/108;
   position: absolute;
-  top: 5rem;
+  top: 2rem;
   right: 18.75rem;
   animation: main-decor-1-animation 2s ease-in-out infinite;
 }
@@ -123,6 +123,10 @@
   display: block;
   object-fit: contain;
   object-position: center;
+  transition: all 0.3s;
+}
+.main__content-badge-image-1:hover {
+  transform: scale(1.1);
 }
 .main__content-badge-image-2 {
   width: 25.1875rem;
@@ -132,6 +136,10 @@
   transform: translateX(8rem);
   object-fit: contain;
   object-position: bottom;
+  transition: all 0.3s;
+}
+.main__content-badge-image-2:hover {
+  transform: translateX(8rem) scale(1.1);
 }
 .main__content-badge.active {
   margin-top: -2rem;
@@ -196,9 +204,15 @@
   transform: translateY(0);
   opacity: 1;
 }
+.main__content-button.active .other-features-wrapper .badge-3:hover {
+  transform: translateY(0) scale(1.1);
+}
 .main__content-button.active .other-features-wrapper .badge-4 {
   transform: translateY(0);
   opacity: 1;
+}
+.main__content-button.active .other-features-wrapper .badge-4:hover {
+  transform: translateY(0) scale(1.1);
 }
 .main__content-button.active button {
   background-color: #be1d8d;
@@ -755,19 +769,19 @@
     margin-right: 0;
   }
   .header__content-right-box {
-    margin-top: -4rem;
+    margin-top: -1.6rem;
   }
   .header__content-right-box-image {
     display: none;
   }
   .header__content-right-box-image-mb {
     display: block;
-    width: 18rem;
-    height: 16.5625rem;
-    transform: translate(2rem, 0);
+    width: 16rem;
+    height: auto;
+    transform: translate(0.5rem, 0);
   }
   .header__content-right-box-message {
-    bottom: 2.5rem;
+    bottom: 0.5rem;
     left: 65%;
     transform: translate(-50%, 100%);
     right: auto;
@@ -776,8 +790,8 @@
   .header__content-right-box-bobby {
     width: 3.375rem;
     position: absolute;
-    bottom: -1rem;
-    left: 2rem;
+    bottom: -2rem;
+    left: 0.5rem;
   }
   .header__content-right-box-decor {
     display: none;
@@ -785,13 +799,13 @@
   .header__content-right-size {
     width: 3.81rem;
     height: auto;
-    right: 0;
+    right: -2rem;
     top: 1.5rem;
   }
   .header__content-right-tym {
     position: absolute;
     top: 4.81rem;
-    left: 1.4rem;
+    left: 0.4rem;
     width: 1.5rem;
     height: 1.25rem;
     display: block;
@@ -800,7 +814,7 @@
   .header__content-right-pink {
     position: absolute;
     top: 7rem;
-    left: -0.26rem;
+    left: -1.26rem;
     width: 1.6875rem;
     height: 2.5rem;
     display: block;
@@ -811,7 +825,7 @@
     top: 6.19rem;
     width: 2.375rem;
     height: 2.4375rem;
-    right: -1.53rem;
+    right: -2.53rem;
     display: block;
     animation: main-decor-1-animation 2s ease-in-out infinite;
   }
@@ -857,7 +871,7 @@
   }
   .navigation {
     position: relative;
-    margin-top: 1.4rem;
+    margin-top: 3.4rem;
   }
   .navigation__text-image {
     width: 17.9375rem;
@@ -877,7 +891,7 @@
 @media screen and (max-width: 767px) {
   .main__title-image {
     width: 17rem;
-    margin-top: 1rem;
+    margin-top: 0rem;
     transform: translateY(2rem);
   }
   .main__leaf-bg {
@@ -939,10 +953,16 @@
   .main__content-badge-image-1 {
     width: 21rem;
   }
+  .main__content-badge-image-1:hover {
+    transform: scale(1);
+  }
   .main__content-badge-image-2 {
     width: 18rem;
     transform: translateX(2.3rem);
     margin-top: -4.4rem;
+  }
+  .main__content-badge-image-2:hover {
+    transform: translateX(2.3rem) scale(1);
   }
   .main__content-button button {
     margin-top: -0.8rem;
@@ -965,6 +985,13 @@
   .main__content-button.active .other-features-wrapper {
     margin-left: 3.4rem;
     margin-top: -1.8rem;
+    transform: translateY(0.6rem);
+  }
+  .main__content-button.active .other-features-wrapper .badge-3:hover {
+    transform: translateY(0.6rem) scale(1);
+  }
+  .main__content-button.active .other-features-wrapper .badge-4:hover {
+    transform: translateY(0) scale(1);
   }
   .main__brand {
     margin-top: 12rem;

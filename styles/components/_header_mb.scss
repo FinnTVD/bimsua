@@ -81,19 +81,19 @@
         margin-top: 0.44rem;
         margin-right: 0;
         &-box {
-          margin-top: -4rem;
+          margin-top: -1.6rem;
         }
         &-box-image {
           display: none;
         }
         &-box-image-mb {
           display: block;
-          width: 18rem;
-          height: 16.5625rem;
-          transform: translate(2rem, 0);
+          width: 16rem;
+          height: auto;
+          transform: translate(0.5rem, 0);
         }
         &-box-message {
-          bottom: 2.5rem;
+          bottom: 0.5rem;
           left: 65%;
           transform: translate(-50%, 100%);
           right: auto;
@@ -102,8 +102,8 @@
         &-box-bobby {
           width: 3.375rem;
           position: absolute;
-          bottom: -1rem;
-          left: 2rem;
+          bottom: -2rem;
+          left: 0.5rem;
         }
         &-box-decor {
           display: none;
@@ -111,13 +111,13 @@
         &-size {
           width: 3.81rem;
           height: auto;
-          right: 0;
+          right: -2rem;
           top: 1.5rem;
         }
         &-tym {
           position: absolute;
           top: 4.81rem;
-          left: 1.4rem;
+          left: 0.4rem;
           width: 1.5rem;
           height: 1.25rem;
           display: block;
@@ -126,7 +126,7 @@
         &-pink {
           position: absolute;
           top: 7rem;
-          left: -0.26rem;
+          left: -1.26rem;
           width: 1.6875rem;
           height: 2.5rem;
           display: block;
@@ -137,7 +137,7 @@
           top: 6.19rem;
           width: 2.375rem;
           height: 2.4375rem;
-          right: -1.53rem;
+          right: -2.53rem;
           display: block;
           animation: main-decor-1-animation 2s ease-in-out infinite;
         }
@@ -194,7 +194,7 @@
 
   .navigation {
     position: relative;
-    margin-top: 1.4rem;
+    margin-top: 3.4rem;
     &__text-image {
       width: 17.9375rem;
     }

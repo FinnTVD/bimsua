@@ -2,7 +2,7 @@
   .main {
     &__title-image {
       width: 17rem;
-      margin-top: 1rem;
+      margin-top: 0rem;
       transform: translateY(2rem);
     }
     &__leaf-bg {
@@ -62,12 +62,18 @@
 
         &-image-1 {
           width: 21rem;
+          &:hover {
+            transform: scale(1);
+          }
         }
 
         &-image-2 {
           width: 18rem;
           transform: translateX(2.3rem);
           margin-top: -4.4rem;
+          &:hover {
+            transform: translateX(2.3rem) scale(1);
+          }
         }
       }
       &-button {
@@ -93,6 +99,18 @@
           .other-features-wrapper {
             margin-left: 3.4rem;
             margin-top: -1.8rem;
+            transform: translateY(0.6rem);
+            & .badge-3 {
+              &:hover {
+                transform: translateY(0.6rem) scale(1);
+              }
+            }
+
+            & .badge-4 {
+              &:hover {
+                transform: translateY(0) scale(1);
+              }
+            }
           }
         }
       }

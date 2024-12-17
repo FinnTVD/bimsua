@@ -12,10 +12,10 @@
     display: none;
   }
   &-decor-1 {
-    width: 6.5rem;
+    width: 5.5rem;
     aspect-ratio: 104 / 108;
     position: absolute;
-    top: 5rem;
+    top: 2rem;
     right: 18.75rem;
     animation: main-decor-1-animation 2s ease-in-out infinite;
   }
@@ -86,7 +86,7 @@
         right: -1rem;
         z-index: 5;
         opacity: 0;
-        transition: 1s ease-in-out
+        transition: 1s ease-in-out;
       }
       &-bim.active {
         opacity: 1;
@@ -135,6 +135,10 @@
         display: block;
         object-fit: contain;
         object-position: center;
+        transition: all 0.3s;
+        &:hover {
+          transform: scale(1.1);
+        }
       }
 
       &-image-2 {
@@ -145,6 +149,10 @@
         transform: translateX(8rem);
         object-fit: contain;
         object-position: bottom;
+        transition: all 0.3s;
+        &:hover {
+          transform: translateX(8rem) scale(1.1);
+        }
       }
     }
 
@@ -217,11 +225,17 @@
           & .badge-3 {
             transform: translateY(0);
             opacity: 1;
+            &:hover {
+              transform: translateY(0) scale(1.1);
+            }
           }
 
           & .badge-4 {
             transform: translateY(0);
             opacity: 1;
+            &:hover {
+              transform: translateY(0) scale(1.1);
+            }
           }
         }
 
