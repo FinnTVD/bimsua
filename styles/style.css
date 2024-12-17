@@ -170,6 +170,7 @@
   margin-left: 5rem;
   transition: all 0.6s cubic-bezier(0.62, 0.22, 0.24, 0.92);
   will-change: transform, opacity;
+  font-family: Arial, sans-serif;
 }
 .main__content-button-decor {
   width: 1.625rem;
