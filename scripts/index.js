@@ -100,6 +100,11 @@ document.addEventListener("DOMContentLoaded", () => {
   setBobbyActive();
   setHeaderLeftSidebar();
 
+  setTimeout(() => {
+    videoPlayer.play();
+    videoPlayer.pause();
+  }, 0);
+
   videoPlayIcon.addEventListener("click", () => {
     videoPlayer.play();
     // Hide the icon play
@@ -163,19 +168,18 @@ document.addEventListener("DOMContentLoaded", () => {
       if (entry.isIntersecting) {
         mainContentLeft.classList.add("active");
         mainContentLeftLeaf.classList.add("active");
-    
+
         // Xóa interval trước nếu nó tồn tại
         if (intervalId) {
           clearInterval(intervalId);
         }
       }
-    
+
       // Clear interval khi phần tử không còn trong viewport
       if (!entry.isIntersecting) {
         clearInterval(intervalId);
       }
     });
-    
   }, observerOptions);
   if (window.innerWidth < 768) {
     let intervalId;
@@ -250,14 +254,16 @@ document.addEventListener("DOMContentLoaded", () => {
     scrollToElementById("footer");
   });
 });
-const main__content_left_bim = document.querySelectorAll(".main__content-left-bim");
+const main__content_left_bim = document.querySelectorAll(
+  ".main__content-left-bim"
+);
 
 setInterval(() => {
-    main__content_left_bim.forEach(element => {
-        if (element.classList.contains('active')) {
-            element.classList.remove('active');
-        } else {
-            element.classList.add('active');
-        }
-    });
+  main__content_left_bim.forEach((element) => {
+    if (element.classList.contains("active")) {
+      element.classList.remove("active");
+    } else {
+      element.classList.add("active");
+    }
+  });
 }, 3000);
