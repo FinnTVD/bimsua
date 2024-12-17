@@ -422,10 +422,11 @@
   }
 }
 .header__left-sidebar {
-  position: absolute;
+  position: fixed;
   top: 2rem;
   left: 2rem;
   cursor: pointer;
+  z-index: 50;
 }
 .header__left-sidebar-humberger {
   width: 3.4375rem;
@@ -454,9 +455,10 @@
   display: none;
 }
 .header__right-sidebar {
-  position: absolute;
+  position: fixed;
   top: 2rem;
   right: 2rem;
+  z-index: 50;
 }
 .header__right-sidebar-logo {
   width: 10.75rem;
@@ -663,8 +665,9 @@
 
 @media screen and (max-width: 767px) {
   .header__left-sidebar {
-    position: absolute;
+    position: fixed;
     top: 1rem;
+    z-index: 60;
     left: 1rem;
   }
   .header__left-sidebar-humberger {

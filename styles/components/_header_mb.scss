@@ -1,8 +1,9 @@
 @media screen and (max-width: 767px) {
   .header {
     &__left-sidebar {
-      position: absolute;
+      position: fixed;
       top: 1rem;
+      z-index: 60;
       left: 1rem;
       &-humberger {
         width: 1.28rem;
