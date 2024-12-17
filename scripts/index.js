@@ -1,11 +1,13 @@
 const setBobbyActive = () => {
   const bobby1 = document.getElementById("bobby-1");
   const bobby2 = document.getElementById("bobby-2");
+  const bobby3 = document.getElementById("bobby-3");
   let bobbyInterval;
 
   const changeToBobby2 = () => {
     clearInterval(bobbyInterval);
     bobby1.classList.remove("active");
+    bobby3.classList.remove("active");
     bobby2.classList.add("active");
   };
 
@@ -13,12 +15,14 @@ const setBobbyActive = () => {
     clearInterval(bobbyInterval);
     bobby2.classList.remove("active");
     bobby1.classList.add("active");
+    bobby3.classList.add("active");
   };
 
   // Set interval to change the bobby image
   bobbyInterval = setInterval(() => {
     if (bobby1.classList.contains("active")) {
       bobby1.classList.remove("active");
+      bobby3.classList.remove("active");
       setTimeout(() => {
         bobby2.classList.toggle("active");
       }, 500);
@@ -28,6 +32,7 @@ const setBobbyActive = () => {
       bobby2.classList.remove("active");
       setTimeout(() => {
         bobby1.classList.toggle("active");
+        bobby3.classList.toggle("active");
       }, 500);
     }
   }, 3000);

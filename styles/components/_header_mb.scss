@@ -29,16 +29,23 @@
       margin-top: 0;
       flex-direction: column;
       &-left {
+        pointer-events: none;
         margin-left: 0;
-
+        & * {
+          pointer-events: all;
+        }
         &-nv-mb {
           display: block;
           width: 4rem;
           height: 5.625rem;
           position: absolute;
-          top: 19.8rem;
+          top: 20.8rem;
           right: 2rem;
           z-index: 1;
+          transition: all 0.5s;
+        }
+        &-nv-mb.active {
+          top: 16.8rem;
         }
 
         &-frame {
@@ -48,7 +55,7 @@
           width: 100vw;
           height: 16.3125rem;
           display: block;
-          margin-top: 19.5rem;
+          margin-top: 16.5rem;
           position: relative;
           z-index: 2;
         }
@@ -102,6 +109,7 @@
           left: -0.6rem;
           width: 1.5rem;
           height: 1.25rem;
+          display: block;
           animation: main-decor-1-animation 2s ease-in-out infinite;
         }
         &-pink {
@@ -110,6 +118,7 @@
           left: -2.26rem;
           width: 1.6875rem;
           height: 2.5rem;
+          display: block;
           animation: main-decor-1-animation 2s ease-in-out infinite;
         }
         &-jade {
@@ -118,6 +127,7 @@
           width: 2.375rem;
           height: 2.4375rem;
           right: -0.53rem;
+          display: block;
           animation: main-decor-1-animation 2s ease-in-out infinite;
         }
       }
@@ -158,14 +168,14 @@
       width: 22.875rem;
       height: 4rem;
       position: absolute;
-      top: 11rem;
+      top: 10rem;
       right: 0;
     }
 
     &__image-2 {
       width: 20.9375rem;
       height: 4.0625rem;
-      top: 16rem;
+      top: 14.19rem;
       position: absolute;
       right: 1rem;
     }
@@ -182,22 +192,11 @@
     }
     &__text-title {
       display: block;
-      width: 100%;
-      padding: 0 1rem;
+      width: 17.75rem;
       position: absolute;
       top: -1.5rem;
       left: 50%;
       transform: translate(-50%, 0);
-      color: #f32181;
-      text-align: center;
-      text-shadow: 0px 0px 12px rgba(255, 255, 255, 0.8);
-      -webkit-text-stroke: 1px #ffffff;
-      font-family: "Coiny", system-ui;
-      font-size: 0.75rem;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 130%; /* 0.975rem */
-      text-transform: uppercase;
     }
   }
 }

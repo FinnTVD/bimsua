@@ -54,6 +54,14 @@ body {
   margin: 0;
   font-family: "linotte";
   font-variation-settings: "wght" 375, "GRAD" 88;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior: none;
+  touch-action: manipulation;
+  -webkit-user-drag: none;
+  -ms-content-zooming: none;
+  vertical-align: baseline;
 }
 .wrapper__root {
   position: relative;

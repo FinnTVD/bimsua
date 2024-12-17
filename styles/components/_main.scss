@@ -129,10 +129,11 @@
       }
 
       &-image-2 {
-        width: 30.625rem;
+        width: 25.1875rem;
+        height: 12.5625rem;
         margin-top: -0.9rem;
-        aspect-ratio: 372 / 139;
-        transform: translateX(3rem);
+        margin-top: -0.2rem;
+        transform: translateX(8rem);
         object-fit: contain;
         object-position: bottom;
       }
@@ -145,6 +146,7 @@
         position: absolute;
         top: 0;
         left: 0;
+        margin-top: -1.4rem;
       }
 
       & button {
