@@ -235,11 +235,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function scrollToElementById(id) {
     const element = document.getElementById(id);
+
     if (element) {
-      element.scrollIntoView({
+      const elementPosition =
+        element.getBoundingClientRect().top + window.pageYOffset;
+      window.scrollTo({
+        top: elementPosition,
         behavior: "smooth", // Cuộn mượt mà
-        block: "start", // Canh đầu element với phần hiển thị
-        inline: "nearest", // Cuộn theo chiều ngang nếu cần
       });
     } else {
       console.warn(`Element với id "${id}" không tồn tại.`);
