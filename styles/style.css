@@ -109,6 +109,7 @@
   margin-top: 5rem;
   margin-right: 9.6875rem;
   flex-direction: column;
+  transition: all 0.2s;
 }
 .main__content-badge-image-1 {
   width: 27.625rem;
@@ -125,6 +126,9 @@
   transform: translateX(8rem);
   object-fit: contain;
   object-position: bottom;
+}
+.main__content-badge.active {
+  margin-top: -2rem;
 }
 .main__content-button {
   position: relative;

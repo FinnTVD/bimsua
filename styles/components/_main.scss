@@ -8,7 +8,7 @@
     margin-top: 2rem;
     width: 39.25rem;
   }
-  &__leaf-bg{
+  &__leaf-bg {
     display: none;
   }
   &-decor-1 {
@@ -121,6 +121,7 @@
       margin-top: 5rem;
       margin-right: 9.6875rem;
       flex-direction: column;
+      transition: all 0.2s;
 
       &-image-1 {
         width: 27.625rem;
@@ -139,6 +140,10 @@
         object-fit: contain;
         object-position: bottom;
       }
+    }
+
+    &-badge.active {
+      margin-top: -2rem;
     }
 
     &-button {

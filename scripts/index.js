@@ -135,6 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   otherFeatureButton.addEventListener("click", () => {
     otherFeatureButton.classList.add("active");
+    document.querySelector(".main__content-badge").classList.add("active");
   });
 
   const observerOptions = {
