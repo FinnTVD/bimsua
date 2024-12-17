@@ -70,10 +70,11 @@
 
 .header {
   &__left-sidebar {
-    position: absolute;
+    position: fixed;
     top: 2rem;
     left: 2rem;
     cursor: pointer;
+    z-index: 50;
 
     &-humberger {
       width: 3.4375rem;
@@ -110,9 +111,10 @@
   }
 
   &__right-sidebar {
-    position: absolute;
+    position: fixed;
     top: 2rem;
     right: 2rem;
+    z-index: 50;
 
     &-logo {
       width: 10.75rem; // 172px

@@ -425,10 +425,11 @@
   }
 }
 .header__left-sidebar {
-  position: absolute;
+  position: fixed;
   top: 2rem;
   left: 2rem;
   cursor: pointer;
+  z-index: 50;
 }
 .header__left-sidebar-humberger {
   width: 3.4375rem;
@@ -457,9 +458,10 @@
   display: none;
 }
 .header__right-sidebar {
-  position: absolute;
+  position: fixed;
   top: 2rem;
   right: 2rem;
+  z-index: 50;
 }
 .header__right-sidebar-logo {
   width: 10.75rem;
@@ -666,8 +668,9 @@
 
 @media screen and (max-width: 767px) {
   .header__left-sidebar {
-    position: absolute;
+    position: fixed;
     top: 1rem;
+    z-index: 60;
     left: 1rem;
   }
   .header__left-sidebar-humberger {
@@ -741,34 +744,44 @@
     margin-top: 0.44rem;
     margin-right: 0;
   }
+  .header__content-right-box {
+    margin-top: -4rem;
+  }
   .header__content-right-box-image {
     display: none;
   }
   .header__content-right-box-image-mb {
     display: block;
-    width: 16.29306rem;
-    height: 10.25rem;
+    width: 18rem;
+    height: 16.5625rem;
+    transform: translate(2rem, 0);
   }
   .header__content-right-box-message {
-    bottom: -0.5rem;
-    left: 50%;
+    bottom: 2.5rem;
+    left: 65%;
     transform: translate(-50%, 100%);
     right: auto;
-    width: 13rem;
+    width: 12rem;
   }
   .header__content-right-box-bobby {
     width: 3.375rem;
     position: absolute;
-    bottom: -4rem;
-    left: -2rem;
+    bottom: -1rem;
+    left: 2rem;
   }
   .header__content-right-box-decor {
     display: none;
   }
+  .header__content-right-size {
+    width: 3.81rem;
+    height: auto;
+    right: 0;
+    top: 1.5rem;
+  }
   .header__content-right-tym {
     position: absolute;
     top: 4.81rem;
-    left: -0.6rem;
+    left: 1.4rem;
     width: 1.5rem;
     height: 1.25rem;
     display: block;
@@ -777,7 +790,7 @@
   .header__content-right-pink {
     position: absolute;
     top: 7rem;
-    left: -2.26rem;
+    left: -0.26rem;
     width: 1.6875rem;
     height: 2.5rem;
     display: block;
@@ -785,10 +798,10 @@
   }
   .header__content-right-jade {
     position: absolute;
-    top: 5.19rem;
+    top: 6.19rem;
     width: 2.375rem;
     height: 2.4375rem;
-    right: -0.53rem;
+    right: -1.53rem;
     display: block;
     animation: main-decor-1-animation 2s ease-in-out infinite;
   }
@@ -834,7 +847,7 @@
   }
   .navigation {
     position: relative;
-    margin-top: 6.4rem;
+    margin-top: 1.4rem;
   }
   .navigation__text-image {
     width: 17.9375rem;

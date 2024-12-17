@@ -232,4 +232,28 @@ document.addEventListener("DOMContentLoaded", () => {
   if (bodySection) {
     bodySectionObserver.observe(bodySection);
   }
+
+  function scrollToElementById(id) {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth", // Cuộn mượt mà
+        block: "start", // Canh đầu element với phần hiển thị
+        inline: "nearest", // Cuộn theo chiều ngang nếu cần
+      });
+    } else {
+      console.warn(`Element với id "${id}" không tồn tại.`);
+    }
+  }
+
+  const listNavItem = document.querySelectorAll(".nav__list .nav__item");
+  listNavItem?.[0].addEventListener("click", () => {
+    scrollToElementById("step-1");
+  });
+  listNavItem?.[1].addEventListener("click", () => {
+    scrollToElementById("body-section");
+  });
+  listNavItem?.[2].addEventListener("click", () => {
+    scrollToElementById("footer");
+  });
 });
