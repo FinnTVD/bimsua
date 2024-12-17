@@ -227,6 +227,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    &__socials {
+      display: flex;
+      align-items: center;
+      gap: 0.875rem;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+      & a {
+        width: 4.5625rem;
+        height: 4.5625rem;
+        display: block;
+        & img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
     &-image {
       width: 36.8125rem;
       aspect-ratio: 589 / 72;

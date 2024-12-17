@@ -199,6 +199,24 @@
   justify-content: center;
   align-items: center;
 }
+.main__brand__socials {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+.main__brand__socials a {
+  width: 4.5625rem;
+  height: 4.5625rem;
+  display: block;
+}
+.main__brand__socials a img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 .main__brand-image {
   width: 36.8125rem;
   aspect-ratio: 589/72;
@@ -877,6 +895,24 @@
   }
   .main__brand {
     margin-top: 12rem;
+  }
+  .main__brand__socials {
+    display: flex;
+    align-items: center;
+    gap: 0.44rem;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .main__brand__socials a {
+    width: 2.13rem;
+    height: 2.13rem;
+    display: block;
+  }
+  .main__brand__socials a img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
   .main__brand-image {
     width: 70%;
