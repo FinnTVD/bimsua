@@ -511,12 +511,12 @@
 }
 .header__right-sidebar {
   position: fixed;
-  top: 2rem;
-  right: 2rem;
+  top: 0rem;
+  right: 0rem;
   z-index: 50;
 }
 .header__right-sidebar-logo {
-  width: 10.75rem;
+  width: 13.75rem;
   aspect-ratio: 172/117;
   object-fit: contain;
 }
@@ -745,13 +745,13 @@
   }
   .header__right-sidebar {
     position: absolute;
-    top: 0;
-    right: 50%;
+    top: -0.5rem;
+    right: 4rem;
     transform: translate(50%, 0);
   }
   .header__right-sidebar-logo {
-    width: 11.4765rem;
-    height: 8.125rem;
+    width: 5.4765rem;
+    height: 5.125rem;
     object-fit: contain;
   }
   .header__content {
@@ -906,7 +906,7 @@
     width: 17.09431rem;
     height: 3.43888rem;
     position: absolute;
-    top: 6rem;
+    top: 4rem;
     left: 50%;
     transform: translateX(-50%);
     object-fit: contain;
@@ -915,7 +915,7 @@
     /* display: none; */
     width: 16.477rem;
     height: 3.09106rem;
-    top: 9.5rem;
+    top: 8rem;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -1265,7 +1265,7 @@ body {
   }
 
   .overlay {
-    background-color: #fc8aa8;
+    background-color: #fb98ae;
     width: 100%;
     height: 20rem;
     position: absolute;
