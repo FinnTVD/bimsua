@@ -227,7 +227,7 @@
   transform: scale(1.1);
 }
 .main__content-button.active .other-features-wrapper .badge-3 {
-  transform: translateY(0);
+  transform: translateY(0) scale(1.1);
   opacity: 1;
 }
 .main__content-button.active .other-features-wrapper .badge-3:hover {
