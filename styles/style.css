@@ -744,7 +744,7 @@
   }
   .header__right-sidebar {
     position: absolute;
-    top: 1.06rem;
+    top: 0;
     right: 50%;
     transform: translate(50%, 0);
   }
@@ -901,20 +901,20 @@
     display: none;
   }
   .heading__image__mb {
-    display: none;
+    display: flex;
     width: 17.09431rem;
     height: 3.43888rem;
     position: absolute;
-    top: 4.32rem;
+    top: 6rem;
     left: 50%;
     transform: translateX(-50%);
     object-fit: contain;
   }
   .heading__image-2 {
-    display: none;
+    /* display: none; */
     width: 16.477rem;
     height: 3.09106rem;
-    top: 7.98rem;
+    top: 9.5rem;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -950,7 +950,7 @@
   .main__title-image {
     width: 17rem;
     margin-top: 0rem;
-    transform: translateY(4rem);
+    transform: translateY(1rem);
   }
   .main__leaf-bg {
     display: block;
@@ -958,7 +958,7 @@
     width: 4.0625rem;
     height: 5.75rem;
     left: 0;
-    top: 5.75rem;
+    top: 3.75rem;
   }
   .main-decor-1 {
     display: none;
@@ -1005,11 +1005,14 @@
     bottom: 3rem;
   }
   .main__content-left.active {
-    transform: translateY(-2rem);
+    transform: translateY(-5rem);
   }
   .main__content-badge {
-    margin-top: 0;
+    margin-top: -6rem;
     width: 100%;
+  }
+  .main__content-badge.active {
+    margin-top: -6rem;
   }
   .main__content-badge-image-1 {
     width: 21rem;
@@ -1057,7 +1060,7 @@
     transform: translateY(0) scale(1);
   }
   .main__brand {
-    margin-top: 11rem;
+    margin-top: 6rem;
   }
   .main__brand__socials {
     padding: 0 1rem;
@@ -1252,7 +1255,7 @@ body {
   .container__background__mb {
     object-fit: fill;
     width: 100%;
-    height: 125.0625rem;
+    height: 100.0625rem;
     position: absolute;
     top: 0;
     left: 0;
