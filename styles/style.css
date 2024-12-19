@@ -1261,6 +1261,16 @@ body {
     left: 0;
     display: block;
   }
+
+  .overlay {
+    background-color: #fc8aa8;
+    width: 100%;
+    height: 20rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
