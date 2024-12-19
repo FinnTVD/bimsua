@@ -131,8 +131,7 @@
 .main__content-badge-image-2 {
   width: 25.1875rem;
   height: 11.5625rem;
-  margin-top: -0.9rem;
-  margin-top: -0.2rem;
+  margin-top: -1.6rem;
   transform: translateX(8rem);
   object-fit: contain;
   object-position: bottom;
@@ -204,7 +203,7 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 1rem;
-  margin-top: 0.5rem;
+  margin-top: -1rem;
 }
 .main__content-button .other-features-wrapper .other-features-flex {
   display: none;
@@ -750,7 +749,7 @@
     transform: translate(50%, 0);
   }
   .header__right-sidebar-logo {
-    width: 8.4765rem;
+    width: 11.4765rem;
     height: 8.125rem;
     object-fit: contain;
   }
