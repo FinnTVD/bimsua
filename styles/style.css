@@ -746,12 +746,12 @@
   .header__right-sidebar {
     position: absolute;
     top: 1.06rem;
-    right: 1rem;
-    /* transform: translate(50%, 0); */
+    right: 50%;
+    transform: translate(50%, 0);
   }
   .header__right-sidebar-logo {
-    width: 6.4765rem;
-    height: 4.125rem;
+    width: 8.4765rem;
+    height: 8.125rem;
     object-fit: contain;
   }
   .header__content {
@@ -821,7 +821,7 @@
   }
   .header__content-right-box-image-mb {
     display: block;
-    width: 14.95544rem;
+    width: 15.95544rem;
     height: 15.3125rem;
     transform: translate(1.5rem, -3.5rem);
     object-fit: contain;
@@ -902,7 +902,7 @@
     display: none;
   }
   .heading__image__mb {
-    display: block;
+    display: none;
     width: 17.09431rem;
     height: 3.43888rem;
     position: absolute;
@@ -912,6 +912,7 @@
     object-fit: contain;
   }
   .heading__image-2 {
+    display: none;
     width: 16.477rem;
     height: 3.09106rem;
     top: 7.98rem;
