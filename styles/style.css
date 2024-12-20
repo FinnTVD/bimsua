@@ -750,8 +750,8 @@
     transform: translate(50%, 0);
   }
   .header__right-sidebar-logo {
-    width: 5.4765rem;
-    height: 5.125rem;
+    width: 6.4765rem;
+    height: 6.125rem;
     object-fit: contain;
   }
   .header__content {
@@ -903,19 +903,18 @@
   }
   .heading__image__mb {
     display: flex;
-    width: 17.09431rem;
-    height: 3.43888rem;
+    width: 20.09431rem;
+    height: 4.43888rem;
     position: absolute;
-    top: 4rem;
+    top: 3rem;
     left: 50%;
     transform: translateX(-50%);
     object-fit: contain;
   }
   .heading__image-2 {
-    /* display: none; */
-    width: 16.477rem;
-    height: 3.09106rem;
-    top: 8rem;
+    width: 21.477rem;
+    height: 5.09106rem;
+    top: 7rem;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
